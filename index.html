@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Form!</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="first-section">
+        <div id="logo-bg">
+            <img src="Resources/white-spider.png" alt="White spider">
+            <span>Spider-Man</span>
+        </div>
+        <div id="author-bg">
+            <span>Photo by <a target="_blank" href="https://unsplash.com/photos/a-pile-of-comics-sitting-next-to-each-other-8SeJUmfahu0">Erik Mclean</a> on <a target="_blank" href="https://unsplash.com/">Unsplash</a></span>
+        </div>
+    </section>
+    <section id="second-section">
+        <p>Welcome to the world of Spider-Man, where Peter Parker, a young and brilliant photographer, dons the iconic red and blue suit to protect New York City. Swing through skyscrapers, battle formidable foes, and witness the <em>incredible</em> adventures of your friendly neighborhood Spider-Man!
+        <p>You <em>know</em> you want to.</p>
+        <form action="">
+            <fieldset>
+                <span>Let's do this!</span>
+                <p>
+                    <label for="first-name">First name</label>
+                    <input type="text" name="first-name" id="first-name" required>
+                    <span></span>
+                </p>
+                <p>
+                    <label for="">Last name</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                    <span></span>
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <span></span>
+                </p>
+                <p>
+                    <label for="phone-number">Phone number</label>
+                    <input type="text" name="phone-number" id="phone-number" pattern="(?:(\(?\+1\)?)\s)?(\d{3})(?:-|\s)?(\d{3})(?:-|\s)?(\d{4})" required>
+                    <span></span>
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <span></span>
+                </p>
+                <p>
+                    <label for="confirm-password">Confirm password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" required>
+                    <span></span>
+                </p>
+            </fieldset>
+            <button>Create Account</button>
+        </form>
+        <p>Already have an account? <a href="">Log in</a></p>
+    </section>
+</body>
+</html>

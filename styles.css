@@ -1,0 +1,193 @@
+
+:root {
+    --RED: rgb(211, 42, 42);
+}
+
+@font-face {
+    font-family: "quicksand";
+    src: url(Resources/fonts/quicksand-regular-webfont.woff2) format("woff2");
+}
+
+/* || GENERAL */
+
+body {
+    background-color: #F9FAFB;
+    display: flex;
+    font-family: "quicksand";
+    width: 100vw;
+}
+
+body > section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#first-section {
+    background: url(https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) left / cover;
+    justify-content: space-between;
+    position: fixed;
+    text-align: center;
+    width: 33%;
+ }
+
+#second-section {
+    background-color: #F9FAFB;
+    gap: 2rem;
+    margin-left: 33%;
+    max-width: 77%;
+    min-height: 100vh; 
+    padding-top: 1.5rem;
+}
+
+a {
+    color: var(--RED);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:active {
+    filter: brightness(65%);
+}
+
+/* || FIRST SECTION */
+
+#first-section > div {
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#logo-bg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    min-height: 5rem;
+}
+
+#author-bg {
+    margin-bottom: 1rem;
+}
+
+#logo-bg span {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+#first-section img {
+    height: 4rem;
+    width: 4rem;
+}
+
+#first-section a {
+    color: white;
+}
+
+/* || SECOND SECTION */
+
+#second-section > p:nth-child(-n + 2) {
+    font-weight: bold;
+}
+
+#second-section > *:not(form) {
+    margin-left: 1.5rem;
+}
+
+button {
+    background-color: var(--RED);
+    border-radius: 5px;
+    color: white;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+#second-section > p {
+    max-width: 75ch;
+}
+
+/* || SECOND SECTON > FORM */
+
+fieldset {
+    background-color: white;
+    border: none;
+    box-shadow: 0px -1px 2px black;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+fieldset span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+fieldset p {
+    display: flex;
+    flex-direction: column;
+    margin: 0.75rem 4rem 0.5rem 0;
+}
+
+fieldset input {
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 300px;
+}
+
+fieldset label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input:focus {
+    appearance: none;
+    border: solid 1px blue;
+    box-shadow: 1px 1px 3px black;
+    outline: none;
+}
+
+input:user-invalid {
+    border: solid 1px red;
+}
+
+input:user-invalid + span {
+    position: relative;
+}
+
+input:user-invalid + span::after {
+    color: red;
+    font-size: 0.75rem;
+    position: absolute;
+}
+
+#first-name:user-invalid + span::after {
+    content: "* Type a correct first name.";
+}
+
+#last-name:user-invalid + span::after {
+    content: "* Type a correct last name.";
+}
+
+#email:user-invalid + span::after {
+    content: "* Type a correct e-mail.";
+}
+
+#phone-number:user-invalid + span::after {
+    content: "* Type a correct phone number.";
+}
+
+#password:user-invalid + span::after {
+    content: "* Type a correct password.";
+}
+
+#confirm-password:user-invalid + span::after {
+    content: "* Type a correct password.";
+}
